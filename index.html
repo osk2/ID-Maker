@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta name="keywords" content="中國國民黨,國民黨,黨證">
+	<meta name="description" content="立即辦理黨證">
+	<title>黨證產生器</title>
+	<link href="bootstrap.min.css" rel="stylesheet" />
+	<style type="text/css">
+		* {
+			font-family: '微軟正黑體', 'Microsoft JhengHei' !important;
+		}
+
+		html {
+			height:100%;
+		}
+		
+		body {
+			height:100%;
+		}
+
+		.container-narrow {
+			margin: 0 auto;
+			max-width: 700px;
+		}
+		.container-narrow > hr {
+			margin: 30px 0;
+		}
+
+		.jumbotron {
+			margin: 60px 0;
+			text-align: center;
+		}
+		.jumbotron h1 {
+			font-size: 72px;
+			line-height: 1;
+		}
+		.jumbotron .btn {
+			font-size: 21px;
+			padding: 14px 24px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=246403012190025&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<div class="container-narrow">
+		<div class="masthead">
+			<ul class="nav nav-pills pull-right">
+				<li id="home" class="active"><a href="./">首頁</a></li>
+				<li id="make" class="gen"><a href="#">申請</a></li>
+				<li style="margin:8px 0 0 3px">
+					<div class="fb-like" data-href="http://idmaker.osk2.me/" data-width="45" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+				</li>
+			</ul>
+			<h3 class="muted">黨證產生器 <small>By osk2</small> <span class="label label-info" data-toggle="tooltip" data-placement="bottom" title="現在可以下載黨證囉！">New!</span></h3>
+		</div>
+		<hr>
+		<div class="jumbotron" id="content">
+			<h1>富貴要人幫<br />辦卡辦這張</h1>
+			<img class="drag_dis" src="img/kmt_logo.jpg" width="350" />
+		 	<h3>有錢沒錢辦張黨證好過年</h3>
+		 	<p>&nbsp;</p>
+		 	<p>&nbsp;</p>
+			<p class="lead">
+				<a class="btn btn-large btn-primary gen" href="#">立即入黨</a>
+			</p>
+		
+		</div>
+	</div>
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/html2canvas.js"></script>
+	<script src="js/index.js?0719"></script>
+</body>
+</html>
