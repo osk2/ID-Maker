@@ -1,9 +1,5 @@
 @charset 'utf-8';
 
-* {
-	font-family: '微軟正黑體', 'Microsoft JhengHei' !important;
-}
-
 html, body {
 	height: 100%;
 }
