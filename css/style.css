@@ -106,3 +106,53 @@ footer.navbar-bottom li a {
 	clear: both;
 	margin-top: 5px;
 }
+
+.kmt-logo {
+	width: 25px;
+	vertical-align: text-bottom;
+}
+
+.kmt-logo.small {
+	width: 20px;
+	vertical-align: text-bottom;
+}
+
+.alert {
+	display: none;
+}
+
+#profile_img {
+	max-width: 80px;
+	max-height: 80px;
+	overflow: hidden;
+}
+
+#profile_name {
+	z-index: 100;
+	position: absolute;
+}
+
+#profile_name_text {
+	font-size: 13px;
+	color: #000;
+}
+
+#gen_link {
+	margin-top: 3em;
+	display: none;
+}
+
+#kmt_id {
+	display: inline-block;
+	min-height: 169px;
+}
+
+#ID_wrap div:first-child {
+	z-index: 0;
+	display: inline-block;
+}
+
+#ID_wrap div:nth-child(2) {
+	z-index: 100;
+	margin: -110px 0 0 -180px;
+}

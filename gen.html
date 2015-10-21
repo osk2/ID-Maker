@@ -12,8 +12,8 @@
 			</label>
 			<input type="url" class="form-control" id="input_url" placeholder="請填入以 http:// 開頭的網址">
 		</div>
-		<div class="alert alert-danger name" style="display:none">報上名來，你是不想要黨證了逆</div>
-		<div class="alert alert-danger url" style="display:none">網址錯啦，你到底還想不想要黨證</div>
+		<div class="alert alert-danger name">報上名來，你是不想要黨證了逆</div>
+		<div class="alert alert-danger url">網址錯啦，你到底還想不想要黨證</div>
 		<button class="btn btn-primary btn-block print-id-btn">領取黨證</button>
 	</form>
 </div>
@@ -22,20 +22,22 @@
 <p class="hidden-sm hidden-xs">&nbsp;</p>
 <p>&nbsp;</p>
 <div class="col-md-8 col-md-offset-2" style="text-align: center">
-	<div id="kmt_id" style="display:inline-block; min-height: 169px;">
-		<div id="ID_wrap" class="wrapper drag_dis">
-			<div style="z-index:0; display:inline-block">
+	<div id="kmt_id">
+		<div id="ID_wrap">
+			<div>
 				<img id="base_img" class="no-drag" src="img/base_img.png">
 			</div>
-			<div style="z-index:100; margin:-110px 0 0 -180px">
-				<img id="profile_img" class="no-drag" src="img/tsai.jpg" style="max-width:80px; max-height:80px; overflow:hidden">
+			<div>
+				<img id="profile_img" class="no-drag" src="img/tsai.jpg">
 			</div>
-			<div id="profile_name" style="z-index:100; position:absolute"><p id="profile_name_text" style="font-size:13px; color:#000;"></p></div>
+			<div id="profile_name">
+				<p id="profile_name_text"></p>
+			</div>
 		</div>
 	</div>
 	<p>&nbsp;</p>
-	<div class="alert alert-success" style="display:none">黨證產生中…請耐心等待</div>
-	<div id="gen_link" style="margin-top:3em; display:none">
+	<div class="alert alert-success">黨證產生中…請耐心等待</div>
+	<div id="gen_link">
 		<a class="btn btn-info btn-lg">下載黨證</a>
 	</div>
 </div>
