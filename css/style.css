@@ -28,13 +28,13 @@ h1 {
 }
 
 @media (min-width: 768px) {
-	.main-logo {
+	.kmt-logo.main-logo {
 		width: 300px;
 	}
 }
 
 @media (max-width: 767px) {
-	.main-logo {
+	.kmt-logo.main-logo {
 		width: 180px;
 	}
 }
