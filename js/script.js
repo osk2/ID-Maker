@@ -32,18 +32,39 @@ $(function(){
 		print_ID();
 		e.preventDefault();
 	});
+
+	$(document).on('change', '#input_file', function (e) {
+		$('.alert-success').show();
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			$(reader).load(function (e) {
+				$('.alert-success').hide();
+				$('#profile_img').attr('src', e.target.result);
+			});
+			reader.readAsDataURL(this.files[0]);
+		}
+	})
 });
 
-//下面開始是歷史遺毒，能動就好了…
-
 var print_ID = function() {
-	$('.alert-success').show();
 	$('.alert-danger').hide();
 
 	var len = 0,
-		char_count,
 		i = 0,
-		input_name = $('#input_name').val();
+		char_count,
+		input_name = $('#input_name').val(),
+		has_image = false,
+		image_source = '';
+
+	if (input_name === '') {
+		$('.form-group.name').addClass('has-error');
+		$('.alert-danger.name').show();
+		$('.form-control').one('keydown', function() {
+			$('.alert-danger').hide(200);
+			$('.form-group').removeClass('has-error');
+		});
+		return false;
+	}
 
 	for(i = 0; i < input_name.length; i++) { 
 		if (input_name[i].match(/[^\x00-\xff]/ig) !== null){
@@ -78,16 +99,59 @@ var print_ID = function() {
 		char_count = 21;
 		break;
 	}
-	var url = $('#input_url').val();
 
-	$.ajax({
-		url: './url_validation.php?url=' + url,
-		type: 'GET',
-		dataType: 'JSON',
-		success: function(data) {
-			if(data.result === 'ok') {
-				$('.alert-danger').hide();
-				if(input_name !== '') {
+	var url = $('#input_url').val();
+	if (url !== '') {
+		has_image = true;
+		image_source = 'url';
+	}
+
+	if ($('#input_file').val() !== '') {
+		has_image = true;
+		image_source = 'input';
+	}
+
+	if (!has_image) {
+		$('.alert-danger.image').show();
+		$('.form-group.url, .form-group.file').addClass('has-error');
+		$('.form-control').one('keydown change', function() {
+			$('.alert-danger').hide(200);
+			$('.form-group').removeClass('has-error');
+		});
+		return false;
+	}
+
+	switch (image_source) {
+	case 'input':
+		var pos = $('#base_img').position(),
+			name_y = pos.top + 144,
+			name_x = pos.left + char_count;
+
+		$('#profile_name').css('top', name_y + 'px');
+		$('#profile_name').css('left', name_x + 'px');
+		$('#profile_name_text').html(input_name);
+		$('.alert-success').hide();
+		$('#kmt_id').addClass('animated bounceIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+			$(this).removeClass('animated bounceIn');
+			gen_img();
+			$('#gen_link').show();
+		});
+		break;
+
+	case 'url':
+
+		var valid_url = false;
+		$.ajax({
+			url: './url_validation.php?url=' + url,
+			type: 'GET',
+			dataType: 'JSON',
+			beforeSend: function () {
+				$('.alert-success').show();
+			},
+			success: function (data) {
+				if(data.result === 'ok') {
+					valid_url = true;
+					$('.alert-danger').hide();
 					url = 'proxy.php?url=' + url;
 					$('#profile_img').attr('src', url).show();
 					$('#profile_img').one('load', function() {
@@ -100,32 +164,30 @@ var print_ID = function() {
 						$('#profile_name_text').html(input_name);
 						if(this.complete) {
 							$('.alert-success').hide();
-							gen_img();
-							$('#gen_link').show();
+							$('#kmt_id').addClass('animated bounceIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+								$(this).removeClass('animated bounceIn');
+								gen_img();
+								$('#gen_link').show();
+							});
 						}
 					});
-
 				} else {
-					$('.form-group.name').addClass('has-error');
 					$('.alert-success').hide();
-					$('.alert-danger.name').show();
+					$('.alert-danger.url-error').show();
+					$('.form-group.url').addClass('has-error');
 					$('.form-control').one('keydown', function() {
 						$('.alert-danger').hide(200);
 						$('.form-group').removeClass('has-error');
 					});
+					return false;
 				}
-			} else {
-				$('.alert-success').hide();
-				$('.alert-danger.url').show();
-				$('.form-group.url').addClass('has-error');
-				$('.form-control').one('keydown', function() {
-					$('.alert-danger').hide(200);
-					$('.form-group').removeClass('has-error');
-				});
 			}
-		}
-	});
+		});
+		break;
 
+	default:
+		break;
+	}
 }
 
 var gen_img = function() {

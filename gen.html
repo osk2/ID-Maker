@@ -4,16 +4,26 @@
 			<label for="input_name" class="control-label">
 				<strong>姓名</strong>
 			</label>
-			<input type="text" class="form-control" id="input_name" placeholder="您的大名" maxlength="8">
+			<input type="text" class="form-control" id="input_name" placeholder="大名" maxlength="8">
 		</div>
+		<p style="text-align: center; margin: 15px auto 0;">你可以上傳相片或引用網路圖片</p>
 		<div class="form-group url">
 			<label for="input_url" class="control-label">
 				<strong>相片連結</strong>
 			</label>
 			<input type="url" class="form-control" id="input_url" placeholder="請填入以 http:// 開頭的網址">
 		</div>
+		<div class="form-group file">
+			<label for="input_file" class="control-label">
+				<strong>載入相片</strong>
+			</label>
+			<input type="file" class="form-control" id="input_file">
+		</div>
+		<p class="pull-right text-muted"><i class="fa fa-info-circle"></i>&nbsp;相片不會被上傳或儲存於伺服器</p>
+		<div class="clearfix"></div>
 		<div class="alert alert-danger name">報上名來，你是不想要黨證了逆</div>
-		<div class="alert alert-danger url">網址錯啦，你到底還想不想要黨證</div>
+		<div class="alert alert-danger image">沒有圖啦，你到底還想不想要黨證</div>
+		<div class="alert alert-danger url-error">連結錯了啦，你到底還想不想要黨證</div>
 		<button class="btn btn-primary btn-block print-id-btn">領取黨證</button>
 	</form>
 </div>
