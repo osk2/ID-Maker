@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- 一個藍到發黑的概念 -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -25,6 +26,8 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 	<a href="https://github.com/osk2/IDgen" class="hidden-xs"><img style="position: absolute; top: 0; left: 0; border: 0; z-index: 9999;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+	<!-- github ribbon -->
+
 	<div class="content-wrapper">
 		<nav class="navbar navbar-default">
 			<div class="container">
@@ -35,18 +38,16 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="./">
-						<span><img src="img/kmt_logo.svg" alt="" style="width: 25px; vertical-align: text-bottom"></span>
+						<span><img src="img/kmt_logo.svg" alt="KMT logo" class="kmt-logo" style="width: 25px; vertical-align: text-bottom"></span>
 						黨證產生器
 					</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="./">首頁</a></li>
-						<li><a href="#" class="gen">申請</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="http://osk2.me" target="_blank">By osk2</a></li>
+						<li class="active"><a href="./" class="not-loader">首頁</a></li>
+						<li><a href="./gen.html" class="gen">申請</a></li>
+						<li><a href="./about.html">關於</a></li>
 					</ul>
 				</div>
 			</div>
@@ -57,12 +58,13 @@
 					<h1>富貴要人幫</h1>
 					<h1>辦卡辦這張</h1>
 					<p>&nbsp;</p>
-					<img class="no-drag" src="img/kmt_logo.svg" width="300">
+					<img class="no-drag kmt-logo main-logo" src="img/kmt_logo.svg">
 					<p>&nbsp;</p>
 				 	<h2>有錢沒錢辦張黨證好過年</h2>
 				 	<p>&nbsp;</p>
 				 	<p class="hidden-xs">&nbsp;</p>
 				 	<a class="btn btn-primary btn-lg gen" href="#">立即入黨</a>
+				 	<p>&nbsp;</p>
 				</div>
 			</div>
 		</div>
@@ -72,16 +74,14 @@
 			<div class="row">
 				<ul>
 					<li>
-						<a href="./">
-							<span><img src="img/kmt_logo.svg" alt="" style="width: 25px; vertical-align: text-bottom"></span>
-							黨證產生器
-						</a>
+						<span><img src="img/kmt_logo.svg" alt="KMT logo" class="kmt-logo" style="width: 20px; vertical-align: text-bottom"></span>
+						<a href="./">黨證產生器</a>
 					</li>
 					<li>
 						<div class="fb-like" data-href="http://idmaker.osk2.me/" data-width="45" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 					</li>
-					<li class="pull-right">
-						<a href="http://osk2.me" target="_blank">By osk2</a>
+					<li class="pull-right hidden-sm hidden-xs">
+						<a href="http://osk2.me" target="_blank" class="text-muted">By osk2</a>
 					</li>
 				</ul>
 			</div>
@@ -90,6 +90,6 @@
 	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="js/html2canvas.js"></script>
-	<script src="js/index.js?1021"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

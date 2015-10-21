@@ -12,15 +12,50 @@ h1 {
 	font-size: 45px;
 }
 
+@media (min-width: 768px) {
+	.content-wrapper {
+		margin: 0 auto -60px;
+		padding-bottom: 60px;
+	}
+}
+
+@media (max-width: 767px) {
+	.content-wrapper {
+		margin: 0 auto;
+		padding-bottom: 0;
+	}
+}
+
 .content-wrapper {
 	min-height: 100%;
 	height: auto;
-	margin: 0 auto -60px;
-	padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+	.main-logo {
+		width: 300px;
+	}
+}
+
+@media (max-width: 767px) {
+	.main-logo {
+		width: 180px;
+	}
+}
+
+@media (min-width: 768px) {
+	footer.navbar-bottom {
+		height: 60px;
+	}
+}
+
+@media (max-width: 767px) {
+	footer.navbar-bottom {
+		height: 120px;
+	}
 }
 
 footer.navbar-bottom {
-	height: 60px;
 	border-radius: 0;
 	margin-bottom: 0;
 }
@@ -29,10 +64,20 @@ footer.navbar-bottom ul {
 	margin: 15px 0;
 }
 
-footer.navbar-bottom li {
-	display: inline;
-	list-style-type: none;
-	padding-right: 20px;
+@media (min-width: 768px) {
+	footer.navbar-bottom li {
+		display: inline;
+		list-style-type: none;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	footer.navbar-bottom li {
+		display: block;
+		list-style-type: none;
+		padding: 10px;
+	}
 }
 
 footer.navbar-bottom li a {
