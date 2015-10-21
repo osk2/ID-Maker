@@ -83,3 +83,30 @@ footer.navbar-bottom ul {
 footer.navbar-bottom li a {
 	color: #fff;
 }
+
+.about-page blockquote {
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.about-page .label-history {
+		top: 0;
+		left: -44px;
+	}
+}
+
+@media (max-width: 767px) {
+	.about-page .label-history {
+		top: -12px;
+		left: -5px;
+	}
+}
+
+.about-page .label-history {
+	position: absolute;
+}
+
+.about-page blockquote p {
+	clear: both;
+	margin-top: 5px;
+}

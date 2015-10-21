@@ -3,7 +3,7 @@ $(function(){
 		e.preventDefault();
 	});
 
-	$('.kmt-logo').on('mouseover touchend', function () {
+	$(document).on('mouseover touchend', '.kmt-logo', function () {
 		$(this).addClass('animated rotateIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
 			$(this).removeClass('animated rotateIn');
 		});
