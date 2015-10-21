@@ -1,36 +1,42 @@
-<div>
+<div class="col-md-8 col-md-offset-2">
 	<form class="form-horizontal">
-		<div id="group_name" class="control-group">
-			<label class="control-label" for="input_name"><strong>姓名</strong></label>
-			<div class="controls">
-				<input type="text" id="input_name" placeholder="您的大名" maxlength="8">
-			</div>
+		<div class="form-group name">
+			<label for="input_name" class="control-label">
+				<strong>姓名</strong>
+			</label>
+			<input type="text" class="form-control" id="input_name" placeholder="您的大名" maxlength="8">
 		</div>
-		<div id="group_url" class="control-group">
-			<label class="control-label" for="input_url"><strong>相片連結</strong></label>
-			<div id="controls_url" class="controls">
-				<input type="url" id="input_url" placeholder="請填入以 http:// 開頭的網址">
-			</div>
+		<div class="form-group url">
+			<label for="input_url" class="control-label">
+				<strong>相片連結</strong>
+			</label>
+			<input type="url" class="form-control" id="input_url" placeholder="請填入以 http:// 開頭的網址">
 		</div>
+		<div class="alert alert-danger name" style="display:none">報上名來，你是不想要黨證了逆</div>
+		<div class="alert alert-danger url" style="display:none">網址錯啦，你到底還想不想要黨證</div>
+		<button class="btn btn-primary btn-block print-id-btn">領取黨證</button>
 	</form>
-	<div class="alert alert-error" style="display:none">網址錯啦，你到底還想不想要黨證</div>
-	<button id="make_now" class="btn btn-primary" onClick="print_ID()">領取黨證</button>
 </div>
+<div class="clearfix"></div>
 <p>&nbsp;</p>
-<div id="kmt_id" style="display:inline-block; min-height: 169px;">
-	<div id="ID_wrap" class="wrapper drag_dis">
-		<div style="z-index:0; display:inline-block">
-			<img id="base_img" src="img/base_img.jpg" width="270" height="169" />
+<p class="hidden-sm hidden-xs">&nbsp;</p>
+<p>&nbsp;</p>
+<div class="col-md-8 col-md-offset-2" style="text-align: center">
+	<div id="kmt_id" style="display:inline-block; min-height: 169px;">
+		<div id="ID_wrap" class="wrapper drag_dis">
+			<div style="z-index:0; display:inline-block">
+				<img id="base_img" class="no-drag" src="img/base_img.png">
+			</div>
+			<div style="z-index:100; margin:-110px 0 0 -180px">
+				<img id="profile_img" class="no-drag" src="img/tsai.jpg" style="max-width:80px; max-height:80px; overflow:hidden">
+			</div>
+			<div id="profile_name" style="z-index:100; position:absolute"><p id="profile_name_text" style="font-size:13px; color:#000;"></p></div>
 		</div>
-		<div style="z-index:100; margin:-110px 0 0 -180px">
-			<img id="profile_img" src="img/blank.jpg" style="max-width:68px; max-height:82px; overflow:hidden"/>
-		</div>
-		<div id="profile_name" style="z-index:100; position:absolute"><p id="profile_name_text" style="font-size:13px"></p></div>
+	</div>
+	<p>&nbsp;</p>
+	<div class="alert alert-success" style="display:none">黨證產生中…請耐心等待</div>
+	<div id="gen_link" style="margin-top:3em; display:none">
+		<a class="btn btn-info btn-lg">下載黨證</a>
 	</div>
 </div>
 <p>&nbsp;</p>
-<div class="alert alert-success" style="display:none">黨證產生中…請耐心等待</div>
-<div id="gen_link" style="margin-top:70px; display:none">
-	<a class="btn btn-info">下載黨證</a>
-</div>
-<script src="js/gen.js?08162"></script>
