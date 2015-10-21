@@ -1,4 +1,4 @@
-$('.drag_dis').on('mousedown', function() {
+$('.no-drag').on('mousedown', function() {
 	return false;
 });
 

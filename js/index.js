@@ -1,15 +1,14 @@
-$('.drag_dis').on('mousedown', function() {
-	return false;
+$('.no-drag').on('mousedown', function(e) {
+	e.preventDefault();
 });
 
 $(function(){
 	$('.label').tooltip();
 
 	$('.gen').on('click', function() {
-		$('#make').addClass('active');
-		$('#home').removeClass('active');
+		$('.navbar-collapse li').removeClass('active').eq(1).addClass('active');
 		$.get('gen.html',function(data){
-			$("#content").hide().html(data).show('fast');
+			$(".content").hide().html(data).show('fast');
 		});
 	})
 });
