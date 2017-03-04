@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta name="keywords" content="中國國民黨,國民黨,黨證">
+  <meta name="description" content="立即辦理黨證">
+  <meta property="og:title" content="黨證產生器">
+  <meta property="og:url" content="http://idmaker.osk2.me">
+  <meta property="og:description" content="立即產生地表上最好用的證件，超過一萬人說讚你還不去辦！">
+  <meta property="og:image" content="http://idmaker.osk2.me/img/kmt_logo.png">
+  <title>黨證產生器</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=246403012190025&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <a href="https://github.com/osk2/ID-Maker" class="hidden-xs"><img style="position: absolute; top: 0; left: 0; border: 0; z-index: 9999;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+  <!-- github ribbon -->
+
+  <div class="content-wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">
+            <span><img src="img/kmt_logo.svg" alt="KMT logo" class="kmt-logo large"></span>
+            黨證產生器
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./">首頁</a></li>
+            <li class="active"><a href="./generate.html">申請</a></li>
+            <li><a href="./about.html">關於</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row content">
+        <div class="col-md-6">
+          <form class="form-horizontal">
+            <div class="form-group name">
+              <label for="input_name" class="control-label">
+                <strong>姓名</strong>
+              </label>
+              <input type="text" class="form-control" id="input_name" placeholder="大名" maxlength="8">
+            </div>
+            <p style="text-align: center; margin: 15px auto 0;">你可以上傳相片或引用網路圖片</p>
+            <div class="form-group url">
+              <label for="input_url" class="control-label">
+                <strong>相片連結</strong>
+              </label>
+              <input type="url" class="form-control" id="input_url" placeholder="請填入以 http:// 開頭的網址">
+            </div>
+            <div class="form-group file">
+              <label for="input_file" class="control-label">
+                <strong>載入相片</strong>
+              </label>
+              <input type="file" class="form-control" id="input_file">
+            </div>
+            <p class="pull-right text-muted"><i class="fa fa-info-circle"></i>&nbsp;相片不會被上傳或儲存於伺服器</p>
+            <div class="clearfix"></div>
+            <div class="alert alert-danger name">報上名來，你是不想要黨證了逆</div>
+            <div class="alert alert-danger image">沒有圖啦，你到底還想不想要黨證</div>
+            <div class="alert alert-danger url-error">連結錯了啦，你到底還想不想要黨證</div>
+            <button class="btn btn-primary btn-block print-id-btn">領取黨證</button>
+          </form>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+          <div class="id-wrapper">
+            <div class="id-image"></div>
+            <div class="id-name">我我我</div>
+          </div>
+          <!-- <div id="kmt_id">
+            <div id="ID_wrap">
+              <div>
+                <img id="base_img" class="no-drag" src="img/base_img.png">
+              </div>
+              <div>
+                <img id="profile_img" class="no-drag" src="img/tsai.jpg">
+              </div>
+              <div id="profile_name">
+                <p id="profile_name_text"></p>
+              </div>
+            </div>
+          </div> -->
+          <p>&nbsp;</p>
+          <div class="alert alert-success">黨證產生中…請耐心等待</div>
+          <div id="gen_link">
+            <a class="btn btn-info btn-lg">下載黨證</a>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  <footer class="navbar-bottom navbar navbar-default">
+    <div class="container">
+      <div class="row">
+        <ul>
+          <li>
+            <span><img src="img/kmt_logo.svg" alt="KMT logo" class="kmt-logo small"></span>
+            <a href="./">黨證產生器</a>
+          </li>
+          <li>
+            <div class="fb-like" data-href="http://idmaker.osk2.me/" data-width="45" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+          </li>
+          <li class="pull-right hidden-sm hidden-xs">
+            <a href="http://osk2.me" target="_blank" class="text-muted">By osk2</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="//cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/html2canvas.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    !function(i,d,m,a,k,e,r){i.GoogleAnalyticsObject=m;i[m]||(i[m]=function(){
+    (i[m].q=i[m].q||[]).push(arguments)});i[m].l=+new Date;e=d.createElement(a);
+    r=d.getElementsByTagName(a)[0];e.src=k;r.parentNode.insertBefore(e,r)}
+    (window,document,'kmt','script','//www.google-analytics.com/analytics.js');
+
+    kmt('create', 'UA-69159377-1', 'auto');
+    kmt('send', 'pageview');
+  </script>
+</body>
+</html>
