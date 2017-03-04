@@ -1,158 +1,198 @@
 @charset 'utf-8';
 
 html, body {
-	height: 100%;
+  height: 100%;
 }
 
 h1 {
-	font-size: 45px;
+  font-size: 45px;
 }
 
 @media (min-width: 768px) {
-	.content-wrapper {
-		margin: 0 auto -60px;
-		padding-bottom: 60px;
-	}
+  .content-wrapper {
+    margin: 0 auto -60px;
+    padding-bottom: 60px;
+  }
 }
 
 @media (max-width: 767px) {
-	.content-wrapper {
-		margin: 0 auto;
-		padding-bottom: 0;
-	}
+  .content-wrapper {
+    margin: 0 auto;
+    padding-bottom: 0;
+  }
 }
 
 .content-wrapper {
-	min-height: 100%;
-	height: auto;
+  min-height: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
-	.kmt-logo.main-logo {
-		width: 300px;
-	}
+  .kmt-logo.main-logo {
+    width: 300px;
+  }
 }
 
 @media (max-width: 767px) {
-	.kmt-logo.main-logo {
-		width: 180px;
-	}
+  .kmt-logo.main-logo {
+    width: 180px;
+  }
 }
 
 @media (min-width: 768px) {
-	footer.navbar-bottom {
-		height: 60px;
-	}
+  footer.navbar-bottom {
+    height: 60px;
+  }
 }
 
 @media (max-width: 767px) {
-	footer.navbar-bottom {
-		height: 120px;
-	}
+  footer.navbar-bottom {
+    height: 120px;
+  }
 }
 
 footer.navbar-bottom {
-	border-radius: 0;
-	margin-bottom: 0;
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
 footer.navbar-bottom ul {
-	margin: 15px 0;
+  margin: 15px 0;
 }
 
 @media (min-width: 768px) {
-	footer.navbar-bottom li {
-		display: inline;
-		list-style-type: none;
-		padding-right: 20px;
-	}
+  footer.navbar-bottom li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: 767px) {
-	footer.navbar-bottom li {
-		display: block;
-		list-style-type: none;
-		padding: 10px;
-	}
+  footer.navbar-bottom li {
+    display: block;
+    list-style-type: none;
+    padding: 10px;
+  }
 }
 
 footer.navbar-bottom li a {
-	color: #fff;
+  color: #fff;
 }
 
 .about-page blockquote {
-	position: relative;
+  position: relative;
 }
 
 @media (min-width: 768px) {
-	.about-page .label-history {
-		top: 0;
-		left: -44px;
-	}
+  .about-page .label-history {
+    top: 0;
+    left: -44px;
+  }
 }
 
 @media (max-width: 767px) {
-	.about-page .label-history {
-		top: -12px;
-		left: -5px;
-	}
+  .about-page .label-history {
+    top: -12px;
+    left: -5px;
+  }
 }
 
 .about-page .label-history {
-	position: absolute;
+  position: absolute;
 }
 
 .about-page blockquote p {
-	clear: both;
-	margin-top: 5px;
+  clear: both;
+  margin-top: 5px;
 }
 
 .kmt-logo {
-	width: 25px;
-	vertical-align: text-bottom;
+  width: 25px;
+  vertical-align: text-bottom;
 }
 
 .kmt-logo.small {
-	width: 20px;
-	vertical-align: text-bottom;
+  width: 20px;
+  vertical-align: text-bottom;
 }
 
 .alert {
-	display: none;
+  display: none;
 }
 
-#profile_img {
-	max-width: 80px;
-	max-height: 80px;
-	overflow: hidden;
+.hr-text {
+  margin: 20px 0 0 0;
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
 }
 
-#profile_name {
-	z-index: 100;
-	position: absolute;
+.hr-text:before {
+  content: '';
+  background: -webkit-linear-gradient(left, transparent, #818078, transparent);
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
 }
 
-#profile_name_text {
-	font-size: 13px;
-	color: #000;
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: #ccc;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  background-color: #222;
 }
 
-#gen_link {
-	margin-top: 3em;
-	display: none;
+.card-image {
+  text-align: center;
 }
 
-#kmt_id {
-	display: inline-block;
-	min-height: 169px;
+.id-wrapper {
+  position: relative;
+  width: 270px;
+  height: 169px;
+  margin-top: 2em;
+  background-image: url(../img/card.png);
+  display: inline-block;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#ID_wrap div:first-child {
-	z-index: 0;
-	display: inline-block;
+.id-wrapper .id-image {
+  position: absolute;
+  width: 68px;
+  height: 84px;
+  top: 57px;
+  left: 10px;
+  background-image: url(../img/tsai.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
-#ID_wrap div:nth-child(2) {
-	z-index: 100;
-	margin: -110px 0 0 -180px;
+.id-wrapper .id-name {
+  position: absolute;
+  width: 68px;
+  height: 15px;
+  overflow: hidden;
+  color: #000;
+  font-size: 12px;
+  text-align: center;
+  top: 143px;
+  left: 11px;
+}
+
+.btn-download {
+  width: 270px;
+  margin: 0 auto;
 }
