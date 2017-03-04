@@ -30,7 +30,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  <a href="https://github.com/osk2/ID-Maker" class="hidden-xs"><img style="position: absolute; top: 0; left: 0; border: 0; z-index: 9999;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+  <a href="https://github.com/osk2/ID-Maker" class="hidden-xs hidden-sm"><img style="position: absolute; top: 0; left: 0; border: 0; z-index: 9999;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
   <!-- github ribbon -->
 
   <div class="content-wrapper">
@@ -59,58 +59,39 @@
     </nav>
     <div class="container">
       <div class="row content">
-        <div class="col-md-6">
+        <div class="col-md-6 card-info">
           <form class="form-horizontal">
             <div class="form-group name">
-              <label for="input_name" class="control-label">
-                <strong>姓名</strong>
+              <label for="input-name" class="control-label">
+                <strong>姓名</strong>&nbsp;<i class="fa fa-question-circle text-muted"></i>
               </label>
-              <input type="text" class="form-control" id="input_name" placeholder="大名" maxlength="8">
+              <input type="text" class="form-control input-name" placeholder="大名">
             </div>
-            <p style="text-align: center; margin: 15px auto 0;">你可以上傳相片或引用網路圖片</p>
             <div class="form-group url">
-              <label for="input_url" class="control-label">
+              <label for="input-url" class="control-label">
                 <strong>相片連結</strong>
               </label>
-              <input type="url" class="form-control" id="input_url" placeholder="請填入以 http:// 開頭的網址">
+              <input type="url" class="form-control input-url" placeholder="http:// 開頭的圖片網址">
             </div>
+            <hr class="hr-text" data-content="或">
             <div class="form-group file">
-              <label for="input_file" class="control-label">
+              <label for="input-image" class="control-label">
                 <strong>載入相片</strong>
               </label>
-              <input type="file" class="form-control" id="input_file">
+              <input type="file" class="form-control input-image">
             </div>
-            <p class="pull-right text-muted"><i class="fa fa-info-circle"></i>&nbsp;相片不會被上傳或儲存於伺服器</p>
+            <p class="pull-right text-muted"><i class="fa fa-info-circle"></i>&nbsp;放心，相片不會被上傳或儲存於伺服器</p>
             <div class="clearfix"></div>
-            <div class="alert alert-danger name">報上名來，你是不想要黨證了逆</div>
-            <div class="alert alert-danger image">沒有圖啦，你到底還想不想要黨證</div>
-            <div class="alert alert-danger url-error">連結錯了啦，你到底還想不想要黨證</div>
-            <button class="btn btn-primary btn-block print-id-btn">領取黨證</button>
+            <div class="alert alert-danger image">檔案有問題啦，回去換一張再來</div>
           </form>
         </div>
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-5 col-md-offset-1 card-image">
           <div class="id-wrapper">
             <div class="id-image"></div>
-            <div class="id-name">我我我</div>
+            <div class="id-name">蔡英文</div>
           </div>
-          <!-- <div id="kmt_id">
-            <div id="ID_wrap">
-              <div>
-                <img id="base_img" class="no-drag" src="img/base_img.png">
-              </div>
-              <div>
-                <img id="profile_img" class="no-drag" src="img/tsai.jpg">
-              </div>
-              <div id="profile_name">
-                <p id="profile_name_text"></p>
-              </div>
-            </div>
-          </div> -->
           <p>&nbsp;</p>
-          <div class="alert alert-success">黨證產生中…請耐心等待</div>
-          <div id="gen_link">
-            <a class="btn btn-info btn-lg">下載黨證</a>
-          </div>
+          <a class="btn btn-info btn-block btn-download">下載黨證</a>
         </div>
         <div class="clearfix"></div>
         <p>&nbsp;</p>
@@ -129,7 +110,7 @@
             <div class="fb-like" data-href="http://idmaker.osk2.me/" data-width="45" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
           </li>
           <li class="pull-right hidden-sm hidden-xs">
-            <a href="http://osk2.me" target="_blank" class="text-muted">By osk2</a>
+            <a href="https://osk2.me" target="_blank" class="text-muted">By osk2</a>
           </li>
         </ul>
       </div>
@@ -137,7 +118,7 @@
   </footer>
   <script src="//cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="js/html2canvas.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.5.2/dom-to-image.min.js" integrity="sha256-XsEDZUcrGVcBuzY4UAjPY/ryj4SrTk6bfhezwpWWbcA=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script>
     !function(i,d,m,a,k,e,r){i.GoogleAnalyticsObject=m;i[m]||(i[m]=function(){
