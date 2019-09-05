@@ -155,6 +155,7 @@ footer.navbar-bottom li a {
 }
 
 .card-image {
+  margin-top: 2em;
   text-align: center;
 }
 
@@ -162,7 +163,6 @@ footer.navbar-bottom li a {
   position: relative;
   width: 270px;
   height: 169px;
-  margin-top: 2em;
   background-image: url(../img/card.png);
   display: inline-block;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
